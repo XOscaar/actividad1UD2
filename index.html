@@ -1,11 +1,133 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>index</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background-color: #0c0d0e;
+      color: #e5e7eb;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1.5rem;
+    }
+
+    .wrapper {
+      width: 100%;
+      max-width: 420px;
+    }
+
+    .path-label {
+      font-size: 0.82rem;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+
+    .path-label span {
+      color: #10b981;
+    }
+
+    .cursor {
+      display: inline-block;
+      width: 7px;
+      height: 14px;
+      background-color: #10b981;
+      margin-left: 4px;
+      vertical-align: middle;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    ul {
+      list-style: none;
+      border-top: 1px solid #262626;
+    }
+
+    li {
+      border-bottom: 1px solid #262626;
+    }
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0.5rem;
+      text-decoration: none;
+      color: #d1d5db;
+      font-size: 0.95rem;
+      transition: background-color 0.15s ease, color 0.15s ease, padding-left 0.15s ease;
+    }
+
+    a:hover {
+      background-color: #17181c;
+      color: #ffffff;
+      padding-left: 0.85rem;
+    }
+
+    .name {
+      font-weight: 500;
+    }
+
+    .arrow {
+      color: #525252;
+      font-size: 0.85rem;
+      transition: color 0.15s ease, transform 0.15s ease;
+    }
+
+    a:hover .arrow {
+      color: #ffffff;
+      transform: translateX(3px);
+    }
+
+    .meta {
+      margin-top: 2rem;
+      font-size: 0.75rem;
+      color: #4b5563;
+      text-align: right;
+    }
+  </style>
 </head>
 <body>
-    
+
+  <main class="wrapper">
+    <div class="path-label">
+      <span>~</span>/workspace/public <span class="cursor"></span>
+    </div>
+
+    <ul>
+      <li>
+        <a href="./cv/index.html">
+          <span class="name">01. cv/</span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      </li>
+      <li>
+        <a href="./porfolio/index.html">
+          <span class="name">02. porfolio/</span>
+          <span class="arrow">&rarr;</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="meta">
+      [2 items]
+    </div>
+  </main>
+
 </body>
 </html>
